@@ -33,6 +33,11 @@ public class UserServiceInterfaceImpl implements UserServiceInterface, UserDetai
     }
 
     @Override
+    public void delete(User user) {
+        userRepository.delete(user);
+    }
+
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username);
         if (user == null) {

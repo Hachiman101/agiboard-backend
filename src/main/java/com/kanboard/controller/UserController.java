@@ -45,4 +45,14 @@ public class UserController {
         userServiceInterface.save(user);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @CrossOrigin
+    @DeleteMapping(value = "deleteUser", consumes = "application/json")
+    public ResponseEntity<Void> deleteUser(@RequestBody UserDTO payload) {
+        String username = payload.getUsername();
+        User user = userServiceInterface.findOne(username);
+
+        userServiceInterface.delete(user);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
