@@ -22,6 +22,11 @@ public class Card {
     public Card() {
     }
 
+    public Card(String name, BoardColumn boardColumn) {
+        this.name = name;
+        this.boardColumn = boardColumn;
+    }
+
     public UUID getId() {
         return id;
     }

@@ -32,6 +32,12 @@ public class BoardColumn {
     public BoardColumn() {
     }
 
+    public BoardColumn(String name, int order, Board board) {
+        this.name = name;
+        this.order = order;
+        this.board = board;
+    }
+
     public UUID getId() {
         return id;
     }

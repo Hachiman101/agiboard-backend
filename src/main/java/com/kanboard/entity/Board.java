@@ -38,6 +38,11 @@ public class Board implements Serializable {
     public Board() {
     }
 
+    public Board(String name, User user) {
+        this.name = name;
+        this.user = user;
+    }
+
     public UUID getId() {
         return id;
     }
