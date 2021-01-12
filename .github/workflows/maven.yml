@@ -5,15 +5,15 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - '*'
   pull_request:
-    branches: [ master ]
+    branches-ignore:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
