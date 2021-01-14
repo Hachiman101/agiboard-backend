@@ -28,6 +28,9 @@ public class AuthController {
         this.userServiceInterface = userServiceInterface;
     }
 
+    @GetMapping
+    public void wakeUpDyno() { }
+
     @PostMapping(value = "/generate-token")
     public ResponseEntity<AuthTokenDTO> generateToken(@RequestBody UserDTO loginUser) throws AuthenticationException {
         authenticationManager.authenticate(
