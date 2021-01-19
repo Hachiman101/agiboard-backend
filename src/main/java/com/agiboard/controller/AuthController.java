@@ -29,7 +29,8 @@ public class AuthController {
     }
 
     @GetMapping
-    public void wakeUpDyno() { }
+    public void wakeUpDyno() {
+    }
 
     @PostMapping(value = "/generate-token")
     public ResponseEntity<AuthTokenDTO> generateToken(@RequestBody UserDTO loginUser) throws AuthenticationException {

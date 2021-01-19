@@ -21,10 +21,10 @@ import javax.annotation.Resource;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private final JwtAuthEntryPoint unauthorizedHandler;
+
     @Resource(name = "userService")
     private UserDetailsService userDetailsService;
-
-    private final JwtAuthEntryPoint unauthorizedHandler;
 
     @Autowired
     public WebSecurityConfig(JwtAuthEntryPoint unauthorizedHandler) {
